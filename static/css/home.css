@@ -1,0 +1,143 @@
+.hlogo {
+    width: 30%;
+    margin: auto;
+    margin-top: 1%;
+}
+@media only screen and (max-width: 730px) {
+    /* For mobile phones: */
+    .hlogo {
+        width: 200px;
+    }
+}
+.hsiteimg{
+    width: 90%;
+    height: 75%;
+    margin-top: 5px;
+} 
+
+/* Search box uplaod from admin panel using models */
+.hsinput {
+    width: 75%;
+}
+#hput {
+    font-size: 13px;
+    padding: 10px;
+    width: 45%;
+    position: relative;
+    margin: auto;
+}
+.hsub{
+    margin: auto;
+    padding: 9px;
+}
+
+
+/* About and Find your next Tour */
+.htour {
+    text-align: center; 
+}
+
+.habout, .hfind{
+    margin: 11px 4px;
+    padding: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+.habout{
+    width: 100px;
+}
+.hfind {
+    width: 150px;
+}
+.habout:hover, .hfind:hover{
+    border: 1.5px solid #dadce0;
+}
+
+
+/* Default Apps on the home page */
+#happs {
+    margin: 0;
+    padding-bottom: 8px;
+    padding-top: 10px !important;
+    display: flex;
+    justify-content: center;
+    
+}
+.hcol {
+    height: 100px;
+    margin: 1%;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    width: 6em;
+    color: black;
+    visibility: visible;
+    border-top-right-radius: 10px;
+
+}
+.hcol:hover {
+    background: rgb(206, 206, 206);
+    
+}
+@media only screen and (max-width: 460px) {
+    /* For mobile phones: */
+    #happs {
+        justify-content: center;
+        flex-wrap: wrap;   
+    }
+    .hcol {
+        margin: 1% 6%;
+        width: 99px;
+    }
+}
+.hbox {
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#hbox1{
+    font-size: 12px;
+    text-indent: 5%;
+    background-color: #8a2424;
+}
+
+
+/* Horizontal line till the end on the home page */
+.hr{
+	width: 50%;
+    margin: auto;
+	color: #8a2424;
+}
+.hbtn{
+    width: 60px;
+    margin: auto;
+}
+.hbtn:hover{
+    background-color: #dadce0;
+    transition: 2s;
+}
+.himgs{
+    width: 100%;
+    height: 75%;
+    margin-top: 5px;
+}
+
+
+/* Footer part */
+.hfooter{
+	background-color: #202945;
+	color: white;
+	height: 40px;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding-top: 1px;
+	letter-spacing: 1px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

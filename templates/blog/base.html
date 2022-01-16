@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block title %}
+
+	{% endblock %}
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="search">
+	<meta name="keywords" content="slaysite">
+	<meta name="keywords" content="easy search">
+	<meta name="keywords" content="dzipup">
+	<meta name="keywords" content="Insurance">
+	<meta name="keywords" content="Online education">
+	<meta name="keywords" content="how to make money online">
+	<meta name="keywords" content="Marketing and advertising">
+	<meta name="keywords" content="programming">
+	<meta name="keywords" content="websites">
+	<meta name="keywords" content="koinonia">
+	<meta name="keywords" content="amazon">
+	<meta name="keywords" content="web">
+	<meta name="keywords" content="apps">
+	<meta name="keywords" content="arts">
+	<meta name="keywords" content="audiobooks">
+	<meta name="keywords" content="mobiles">
+	<meta name="keywords" content="banking">
+	<meta name="keywords" content="beauty & cosmestics">
+	<meta name="keywords" content="birthday wishes">
+	<meta name="keywords" content="books">
+	<meta name="keywords" content="browsers">
+	<meta name="keywords" content="cartoons">
+	<meta name="keywords" content="cooking & food">
+	<meta name="keywords" content="disney">
+	<meta name="keywords" content="entertainmnets">
+	<meta name="keywords" content="fashion">
+	<meta name="keywords" content="gaming">
+	<meta name="keywords" content="saver">
+	<meta name="keywords" content="google">
+	<meta name="keywords" content="graphics design">
+	<meta name="keywords" content="health care">
+	<meta name="keywords" content="images">
+	<meta name="keywords" content="jobs">
+	<meta name="keywords" content="microsoft">
+	<meta name="keywords" content="apple">
+	<meta name="keywords" content="movies">
+	<meta name="keywords" content="musics">
+	<meta name="keywords" content="news">
+	<meta name="keywords" content="online dating">
+	<meta name="keywords" content="online payments">
+	<meta name="keywords" content="opera">
+	<meta name="keywords" content="pdfs">
+	<meta name="keywords" content="programming">
+	<meta name="keywords" content="shopping">
+	<meta name="keywords" content="social">
+	<meta name="keywords" content="sports">
+	<meta name="keywords" content="travels">
+	<meta name="keywords" content="tv series and tv shows">
+	<meta name="keywords" content="videos">
+	<meta name="keywords" content="weather">
+	<meta name="keywords" content="web hosting">
+	<meta name="keywords" content="wikipedia">
+	<meta name="keywords" content="wwe">
+	<meta name="keywords" content="covid 19">
+	<meta name="keywords" content="facebook">
+	<meta name="keywords" content="youtube">
+	<meta name="keywords" content="booking">
+	<meta name="keywords" content="gdp">
+	<meta name="keywords" content="saver">
+
+	<meta name="viewport" content="width=devic­e-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/about.css' %}">
+	<link rel="stylesheet" href="{% static 'css/tour.css' %}">
+	<link rel="shortcut icon" href="{% static 'images/siteicon.png' %}">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<noscript>Sorry! Your browser does not support JavaScript!</noscript>
+	<style>
+		/* 202124 */
+	.theme-Dark{
+	    background-color: #131927;
+	    transition: 0.8s;
+	    color: white;
+ 	}
+	.bbtn{
+		margin-top: 1%;
+		margin-left: 80%;
+		margin-bottom: 0;
+		padding: 5px;
+		background-color: #f8f9fa;
+		border: 1px solid #f8f9fa;
+		border-radius: 4px;
+		color: #3c4043;
+		cursor: pointer;
+		font-family: arial,sans-serif;
+		width: 80px;
+	}
+	.bbtn:hover{
+		border: 1.5px solid #dadce0;
+	}
+	body, a, label, button, .bbtn, input{
+		cursor: url({% static 'images/cursor.png' %})0 0,
+		default !important;
+	}
+
+	</style>
+</head>
+
+<body id="body">
+
+	{% block content %}
+
+	{% endblock %}
+	
+<script>
+	 // For dark mode saving even when you have gone off the site
+	 let lS = localStorage;
+ if (localStorage) {
+   if (lS.getItem("theme")) {
+     document.getElementById("body").className= "theme-" + lS.getItem("theme");
+     document.querySelector(".bbtn").innerHTML = lS.getItem("theme");
+   }
+   else {
+     lS.setItem("theme", "Light");
+   }
+ }
+ function check() {
+   if (lS.getItem("theme")) {
+     if (lS.getItem("theme") == 'Light') {
+       lS.setItem('theme', 'Dark');
+     }
+     else {
+       lS.setItem('theme', 'Light');
+     }
+     document.getElementById('body').className = "theme-" + lS.getItem('theme');
+     document.querySelector(".bbtn").innerHTML = lS.getItem("theme");
+   }
+   else {
+     lS.setItem('theme', 'Light');
+   }
+ }
+
+</script>
+</body>
+</html>

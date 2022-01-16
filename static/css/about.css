@@ -1,0 +1,239 @@
+.aheader{
+	
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 85vh;
+}
+.anavbar{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	background: rgba(0,0,0,0.2);
+	margin-bottom:10px; 
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);	
+}
+.anavbar ul{
+	display: flex;
+	width: 100%;
+}
+.anavbar ul li{
+	display: inline-block;
+	padding: 8px;
+	font-size: 15px;
+}
+.anavbar ul li a{
+	color:white ;
+	text-decoration: none;
+}
+.anavbar ul li a:hover{
+	font-size: 25px;
+	color:white;
+	border-bottom: 1px solid red;
+	transition: 1s ease-in-out;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+.logo{
+	width:100%;
+}
+
+/* The transform and link to Slaysite.com */
+.alname{
+	text-align: center;
+	border-radius: 20px;
+	color: white;
+}
+.alname h1{
+	font-size: 40px;
+}
+.alname p{
+	letter-spacing: 20px;
+	font-size: 20px;
+}
+.button{
+	font-weight: bold;
+	background-color: yellow;
+	width: 40%;
+	border-radius: 20px;
+	height: 40px;
+	padding:10px 20px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% ,-50%);
+
+}
+.button:hover{
+	transition:1s  ease;
+	font-size: 20px;
+	color: white;
+	background-color: #15256b;
+	width: 45%;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+
+/* About us */
+.article{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	justify-content: center;
+	font-family: arial,sans-serif;
+}
+.about{
+	padding: 20px;
+	padding-top:64px ;
+	padding-bottom: 64px;
+	width: 70%;
+	flex-basis: 70%;
+	margin: auto;
+}
+#about{
+    text-align: center;
+}
+.aborder{
+	width: 5px;
+	background-color: black;
+	height: 300px;
+}
+.asocial{
+	width: 29%;
+	flex-basis: 28%;
+	margin: auto;
+	padding: 20px;
+	padding-top:64px;
+	padding-bottom: 64px;
+}
+.asocial i{
+	font-size: 20px;
+	border-radius: 20px;
+	padding: 5px;
+	margin: 5px;
+	color: white;
+}
+.asocial .aic{
+	background-color: #f1f1f1;
+	position: relative;
+	text-align: center;		
+	top: 10%;
+	left: 0;
+	width: 100%;
+	color:#333;
+	padding:5px;
+	}
+.asocial a{
+	text-decoration: none;
+	color: black;
+}
+.asocial a:hover{
+	transition:1s  ease;
+	font-size: 18px;
+	color:red;
+	border-bottom: 1px solid red;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+@media only screen and (max-width: 760px){
+	.article{
+		display: inline-block;
+	}	
+	.aborder{display: none;}
+	.asocial{
+		width:100%;
+		background-color: red;
+	}
+	.asocial a{
+		text-decoration: none;
+	}
+	.asocial .aic{
+		background-color: #f1f1f1;
+		text-align: center;		
+		top: 10%;
+		color:#333;
+		padding:5px;
+	}
+}
+
+/* Our team pictures */
+.acontainer{
+	display: block;
+	padding-top:64px !important;
+	padding-bottom: 64px !important;
+	text-align: center;
+}
+.amodal{
+	display: block;
+}
+.adiv-img{
+	display:inline-block;
+	margin: 5px;
+    border: 2px solid #ccc;
+    width: 300px;
+    margin: 20px;
+    /* border-radius: 50px; */
+    text-align: center;
+}
+.adiv-img img{
+	width: 100%;
+	height:250px;
+	/* border-radius: 50px; */
+}
+
+
+/* <!-- Form and contact side on the about page --> */
+.acontact{
+	padding: 40px;
+	border-radius: 5px;
+	display: flex;	
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+.acontact h2,p{
+	display: block;
+	margin:1em;
+}
+.arcol{
+	width: 50%;
+	display: inline-block;
+}
+@media only screen and (max-width: 600px){
+    .arcol{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+.ainp{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.ainp input,textarea{
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+}
+
+
+/* Footer part */
+.afooter{
+	width: 100%;
+	text-align: center;
+	background-color: #202945;
+	font-family: Arial, sans-serif;
+	color: white;
+	display: inline-block;
+	flex-wrap: wrap;
+}

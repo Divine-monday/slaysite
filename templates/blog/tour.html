@@ -1,0 +1,157 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<title>Slaysite Tour</title>
+    <div class="tourpic">
+        <a href="{% url 'home' %}" class="tbk"><i class="fa fa-arrow-left"></i> Go_Back</a>
+        <img src="{% static '/images/slaysitetour.png' %}" class="timg">
+    </div>
+
+    <br>
+    <navs class="k">
+        <input type="checkbox" id="tcheck">
+        <label for="tcheck" class="tcheckbtn">
+            <i class="">&#9776</i>
+        </label>
+        <ul id="navs">
+            <li><a href="#" data-tab-target="#tourall" class="tl"> All</a></li>
+            <li><a href="#tourmovies" data-tab-target="#tourmovies" class="tl"> Movies</a></li>
+            <li><a href="#" data-tab-target="#tourmusics" class="tl"> Musics</a></li>
+            <li><a href="#" data-tab-target="#toursports" class="tl"> Sports</a></li>
+            <li><a href="#" data-tab-target="#tournews" class="tl"> News</a></li>
+            <li><a href="#" data-tab-target="#tourgames" class="tl"> Games</a></li>
+        </ul>
+    </navs>
+    
+<div class="tab-content">
+    <div id="tourall" data-tab-content class="active">
+        <h3 class="theads">All Trends</h3>
+        <div class="tbackground">
+            <div class="theader" style="background-image: linear-gradient(rgba(0, 0, 0, 0.479),rgba(8, 0, 0, 0.13)), url({% static 'images/net1.jpg' %});">
+                <h1 style="font-family: Verdana; color: rgb(255, 4, 4); font-size: 3.125rem; padding-top: 10%; text-align: center;">Trendings
+                    <!-- <strong style="color: rgb(158, 157, 157);">Trailers</strong> -->
+                    <br>On<strong>...</strong>
+                    <br>
+                    <img class="tmovimg" src="{% static 'images/slaysite.png' %}">
+                </h1>
+            </div>
+        </div>
+        <div class="tallvid">
+            {% for x in tourall_file %}
+            <div class="txtitle">
+                <div class="">{{x.tourall_title}}</div>
+                <a href="{{x.tourall_video.url}}">
+                    <img class="tvids" src="{{x.tourall_file.url}}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+    </div>
+
+
+
+
+        <!--#################### Category For TourMovies ####################-->
+        <div id="tourmovies" data-tab-content>
+            <h3 class="theads">Trending Movies</h3>
+            <div class="allvid">
+                {% for x in tourmovies_file %}
+            
+                <div class="xtitle">
+                    <div class="">{{x.tourmovies_title}}</div>
+                    <a href="{{x.tourmovies_video.url}}">
+                        <img class="vids" src="{{x.tourmovies_file.url}}">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <br><br><br>
+        </div>
+
+        
+
+
+    <!--#################### Category For TourMusics ####################-->
+    <div id="tourmusics" data-tab-content>
+        <h3 class="theads">Trending Musics</h3>
+        <div class="allvid">
+            {% for x in tourmusics_file %}
+        
+            <div class="xtitle">
+                <div class="">{{x.tourmusics_title}}</div>
+                <a href="{{x.tourmusics_video.url}}">
+                    <img class="vids" src="{{x.tourmusics_file.url}}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+    </div>
+    
+
+
+
+    <!--#################### Category For TourSports ####################-->
+    <div id="toursports" data-tab-content>
+        <h3 class="theads">Trending Sports</h3>
+        <div class="allvid">
+            {% for x in toursports_file %}
+        
+            <div class="xtitle">
+                <div class="">{{x.toursports_title}}</div>
+                <a href="{{x.toursports_video.url}}">
+                    <img class="vids" src="{{x.toursports_file.url}}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+    </div>
+
+
+
+    
+    <!--#################### Category For TourNews ####################-->
+    <div id="tournews" data-tab-content>
+        <h3 class="theads">Trending News</h3>
+        <div class="allvid">
+            {% for x in tournews_file %}
+        
+            <div class="xtitle">
+                <div class="">{{x.tournews_title}}</div>
+                <a href="{{x.tournews_video.url}}">
+                    <img class="vids" src="{{x.tournews_file.url}}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+    </div>
+
+    
+
+    
+    <!--#################### Category For TourGames ####################-->
+    <div id="tourgames" data-tab-content>
+        <h3 class="theads">Trending Games</h3>
+        <div class="allvid">
+            {% for x in tourgames_file %}
+        
+            <div class="xtitle">
+                <div class="">{{x.tourgames_title }}</div>
+                <a href="{{x.tourgames_video.url}}">
+                    <img class="vids" src="{{x.tourgames_file.url}}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+    </div>
+
+</div>
+<a href=""id="back-to-top">Top</a>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

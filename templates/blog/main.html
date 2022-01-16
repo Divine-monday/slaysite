@@ -1,0 +1,1075 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<title>Slaysite - Easy access to different websites</title>
+<center>
+	{% if messages %}
+		{% for message in messages %}
+			<h2>Thanks {{ message }}</h2>
+			<p>We recieved your email and will respond shortly...</p>
+		{% endfor %}
+	{% endif %}
+</center>
+
+<div class="mimg2">
+    {% for m in slaysiteicon_file %}
+        <span>
+            <a href="{% url 'home' %}" title="Back to Home Page">
+                <img class="msimg" src="{{m.slaysiteicon_file.url}}">
+            </a>
+                <small style="font-size: 14px;
+                                font-family: Arial,sans-serif;
+								font-weight: bold; 
+                                margin-left: 2px;">{{data.country}}</small>
+        </span>
+    {% endfor %}
+    <h1 class="mh"><a href="{% url 'about' %}"><button><b>About Us</b></button></a>
+        <div class="pactive">active</div>
+    </h1>
+</div>
+
+<div class="mnavbar">
+<br>
+    <ul>
+        <li><a href="#" data-tab-target="#web">-<i class="fa fa-globe"></i> Web-</a></li>
+        <li><a href="#" data-tab-target="#top">-<i class="fa fa-home"></i> Top 10-</a></li>
+        <li><a href="#" data-tab-target="#eni">-<i class="fa fa-eni"></i> <b>KOINONIA-</b></a></li>
+        <li><a href="#" data-tab-target="#hill">-<i class="fa fa-hill"></i> <b>Hillsong-</b></a></li>
+        <li><a href="#" data-tab-target="#amazon">-<i class="fa fa-amazon"></i> Amazon-</a></li>
+        <li><a href="#" data-tab-target="#app">-<i class="fa fa-th-large"></i> Apps-</a></li>
+        <li><a href="#" data-tab-target="#art">-<i class="fa fa-paint-brush"></i> Art-</a></li>
+        <li><a href="#" data-tab-target="#audiobook">-<i class="fa fa-file-audio-o"></i> AudioBook-</a></li>
+        <li><a href="#" data-tab-target="#auto">-<i class="fa fa-automobile"></i> Auto-Mobiles-</a></li>
+        <li><a href="#" data-tab-target="#banking">-<i class="fa fa-bank"></i> Banking-</a></li>
+        <li><a href="#" data-tab-target="#products">-<i class="fa fa-tint"></i> Beauty & Cosmetics-</a></li>
+        <li><a href="#" data-tab-target="#birthday">-<i class="fa fa-gift"></i> Birthday-Wishes-</a></li>
+        <li><a href="#" data-tab-target="#book">-<i class="fa fa-book"></i> Books-</a></li>
+        <li><a href="#" data-tab-target="#browser">-<i class="fa fa-recycle"></i> Browsers-</a></li>
+        <li><a href="#" data-tab-target="#cartoon">-<i class="fa fa-cubes"></i> Cartoons-</a></li>
+        <li><a href="#" data-tab-target="#cooking">-<i class="fa fa-cutlery"></i> Cooking & Food-</a></li>
+        <li><a href="#" data-tab-target="#disney">-<i class="fa-amazon-disney"></i> Disney-</a></li>
+        <li><a href="#" data-tab-target="#education">-<i class="fa fa-graduation-cap"></i> Education-</a></li>
+        <li><a href="#" data-tab-target="#entertainment">-<i class="fa fa-headphones"></i> Entertainm­ent-</a></li>
+        <li><a href="#" data-tab-target="#fashion">-<i class="fas fa-tshirt"></i> Fashion-</a></li>
+        <li><a href="#" data-tab-target="#game">-<i class="fa fa-gamepad"></i> Gaming-</a></li>
+        <li><a href="#" data-tab-target="#gdp">-<i class="fa fa-gdp"></i> GDP-</a></li>
+        <li><a href="#" data-tab-target="#google">-<i class="fa fa-google"></i> Google-</a></li>
+        <li><a href="#" data-tab-target="#design">-<i class="fa fa-splotch"></i> Grahpics-Design-</a></li>
+        <li><a href="#" data-tab-target="#health">-<i class="fa fa-medkit"></i> Health Care-</a></li>
+        <li><a href="#" data-tab-target="#images">-<i class="fa fa-image"></i> Images-</a></li>
+        <li><a href="#" data-tab-target="#jobs">-<i class="fa fa-briefcase"></i> Jobs-</a></li>
+        <li><a href="#" data-tab-target="#microsoft">-<i class="fa fa-windows"></i> Microsoft-</a></li>
+        <li><a href="#" data-tab-target="#movies">-<i class="fa fa-film"></i> Movies-</a></li>
+        <li><a href="#" data-tab-target="#musics">-<i class="fa fa-music"></i> Musics-</a></li>
+        <li><a href="#" data-tab-target="#news">-<i class="fa fa-newspaper-o"></i> News-</a></li>
+        <li><a href="#" data-tab-target="#dating">-<i class="fa fa-heart"></i> Online_Dating-</a></li>
+        <li><a href="#" data-tab-target="#onlinepay">-<i class="fa fa-money"></i> OnlinePayment-</a></li>
+        <li><a href="#" data-tab-target="#opera">-<i class="fa fa-opera"></i> Opera-</a></li>
+        <li><a href="#" data-tab-target="#pdfs">-<i class="fa fa-file"></i> Pdfs-</a></li>
+        <li><a href="#" data-tab-target="#programming">-<i class="fa fa-desktop"></i> Programming-</a></li>
+        <li><a href="#" data-tab-target="#shopping">-<i class="fa fa-shopping-cart"></i> Shopping-</a></li>
+        <li><a href="#" data-tab-target="#social">-<i class="fa fa-users"></i> Social-</a></li>
+        <li><a href="#" data-tab-target="#sports">-<i class="fa fa-soccer-ball-o"></i> Sports-</a></li>
+        <li><a href="#" data-tab-target="#travel">-<i class="fa fa-plane"></i> Travel-</a></li>
+        <li><a href="#" data-tab-target="#tvseries">-<i class="fa fa-tv"></i> TV Shows-</a></li>
+        <li><a href="#" data-tab-target="#videos">-<i class="fa fa-play-circle"></i> Videos-</a></li>
+        <li><a href="#" data-tab-target="#weather">-<i class="fa fa-cloud"></i> Weather-</a></li>
+        <li><a href="#" data-tab-target="#webhost">-<i class="fa fa-webhost"></i> Web-Hosting-</a></li>
+        <li><a href="#" data-tab-target="#wikipedia">-<i class="fa fa-wikipedia-w"></i> Wikipedia-</a></li>
+        <!-- <li><a href="#" data-tab-target="#reference">-<i class="fa fa-flag"></i> Reference-</a></li> -->
+        <li><a href="#" data-tab-target="#wwe">-<i class="fa fa-wwe"></i> <b>WWE-</b></a></li>
+        <li><a href="#" data-tab-target="#corona">-<i class="fa fa-heartbeat"></i> <b>COVID-19-</b></a></li>
+        <li style="background: red;"><a href="#" data-tab-target="#donate"><i class="fa fa-heart"></i> DONATE</a></li>
+    </ul>
+</div>
+<br>
+<!-- search level -->
+<center>
+    <h1>Where to next?</h1>
+    <div class="msearch" id="msid">
+        <form action="https://www.google.com/search" method="GET" target="_blank" class="msput">
+            <input type="text" name="q" placeholder="Search GOOGLE or enter web address" required="" autocomplete="off" class="msinput">
+            <input type="submit" value="Search" style="font: 14px arial,sans-serif;">
+        </form>
+    </div>
+</center>
+
+<!--apps and other -->
+<div class="tab-content">
+<div id="top" id="apps" data-tab-content class="active">
+	<h2><i class="fa fa-home"></i> Top 10</h2>
+	<hr>
+    <div class="" id="top">
+        {% for i in news_article_file %}
+        <div class="mbox col-5" id="box13">
+            <navs class="news_head">{{i.news_article_head}}</navs>
+            <div class="mhbox">{{i.news_article_title}}</div>
+            <images style="width: 100%; height: 75%;" controls="controls">
+                <a href="{{i.news_article_url}}" target="_blank">
+                    <img class="mupimg" src="{{i.news_article_file.url}}"/>
+                </a>
+            </images>
+        </div>
+    {% endfor %}
+    </div>
+<br><br><br>
+</div>
+
+
+<!--Top search engines are all contained on the WEB section -->
+<div id="web" data-tab-content>
+	<h2><i class="fa fa-globe"></i> Web</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in web_file %}
+			<div class="mshbox">
+				<a href="{{a.web_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.web_file.url}}">
+					<label>{{a.web_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top eni are all contained on the ENI section -->
+<div id="eni" data-tab-content>
+	<h2><i class="fa fa-eni"></i> Eternity Network International</h2>
+	<hr><br><br>
+		<div class="mlink col-7">
+			{% for a in koinonia_file %}
+			<div class="mshbox">
+				<a href="{{a.koinonia_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.koinonia_file.url}}">
+					<label>{{a.koinonia_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br>
+<h2><i class="fa fa-sph"></i> Spirit Word House</h2>
+	<hr><br><br>
+		<div class="mlink col-7">
+			{% for a in koothers_file %}
+			<div class="mshbox">
+				<a href="{{a.koothers_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.koothers_file.url}}">
+					<label>{{a.koothers_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+
+<!--Top amazon are all contained on the AMAZON section -->
+<div id="hill" data-tab-content>
+	<h2><i class="fa fa-hillsong"></i> Hillsong United</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in hillsong_file %}
+			<div class="mshbox">
+				<a href="{{a.hillsong_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.hillsong_file.url}}">
+					<label>{{a.hillsong_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top amazon are all contained on the AMAZON section -->
+<div id="amazon" data-tab-content>
+	<h2><i class="fa fa-amazon"></i> Amazon</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in amazon_file %}
+			<div class="mshbox">
+				<a href="{{a.amazon_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.amazon_file.url}}">
+					<label>{{a.amazon_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top apps are all contained on the APP section -->
+<div id="app" data-tab-content>
+	<h2><i class="fa fa-th-large"></i> Apps</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in aps_file %}
+			<div class="mshbox">
+				<a href="{{a.aps_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.aps_file.url}}">
+					<label>{{a.aps_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top arts are all contained on the ART section -->
+<div id="art" data-tab-content>
+	<h2><i class="fa fa-paint-brush"></i> Art</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in art_file %}
+			<div class="mshbox">
+				<a href="{{a.art_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.art_file.url}}">
+					<label>{{a.art_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top audiobook are all contained on the AUDIOBOOK section -->
+<div id="audiobook" data-tab-content>
+	<h2><i class="fa fa-audiobook"></i> AudioBook</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in audiobook_file %}
+			<div class="mshbox">
+				<a href="{{a.audiobook_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.audiobook_file.url}}">
+					<label>{{a.audiobook_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top automotive are all contained on the MOBILE section -->
+<div id="auto" data-tab-content>
+	<h2><i class="fa fa-automotives"></i> Auto-Mobiles</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in automobiles_file %}
+			<div class="mshbox">
+				<a href="{{a.automobiles_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.automobiles_file.url}}">
+					<label>{{a.automobiles_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top banking are all contained on the BANKING section -->
+<div id="banking" data-tab-content>
+	<h2><i class="fa fa-bank"></i> Banking</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in banking_file %}
+			<div class="mshbox">
+				<a href="{{a.banking_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.banking_file.url}}">
+					<label>{{a.banking_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top products are all contained on the PRODUCT section -->
+<div id="products" data-tab-content>
+	<h2><i class="fa fa-tint"></i> Beauty & Cosmetics</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in bcosmetics_file %}
+			<div class="mshbox">
+				<a href="{{a.bcosmetics_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.bcosmetics_file.url}}">
+					<label>{{a.bcosmetics_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top Birthday are all contained on the BIRTHDAY section -->
+<div id="birthday" data-tab-content>
+	<h2><i class="fa fa-birthday"></i> Birthday-Wishes</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in birthday_file %}
+			<div class="mshbox">
+				<a href="{{a.birthday_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.birthday_file.url}}">
+					<label>{{a.birthday_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top books are all contained on the BOOK section -->
+<div id="book" data-tab-content>
+	<h2><i class="fa fa-book"></i> Books</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in books_file %}
+			<div class="mshbox">
+				<a href="{{a.books_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.books_file.url}}">
+					<label>{{a.books_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top browser are all contained on the BROWSER section -->
+<div id="browser" data-tab-content>
+	<h2><i class="fa fa-recycle"></i> Browser</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in browsers_file %}
+			<div class="mshbox">
+				<a href="{{a.browsers_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.browsers_file.url}}">
+					<label>{{a.browsers_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top catoon are all contained on the CARTOONS section -->
+<div id="cartoon" data-tab-content>
+	<h2><i class="fa fa-cat"></i> Cartoons</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in cartoons_file %}
+			<div class="mshbox">
+				<a href="{{a.cartoons_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.cartoons_file.url}}">
+					<label>{{a.cartoons_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top cooking are all contained on the COOKING section -->
+<div id="cooking" data-tab-content>
+	<h2><i class="fa fa-cutlery"></i> Cooking & Food</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in cfood_file %}
+			<div class="mshbox">
+				<a href="{{a.cfood_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.cfood_file.url}}">
+					<label>{{a.cfood_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top disney are all contained on the DISNEY section -->
+<div id="disney" data-tab-content>
+	<h2><i class="fa fa-disney"></i> Disney</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in disney_file %}
+			<div class="mshbox">
+				<a href="{{a.disney_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.disney_file.url}}">
+					<label>{{a.disney_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top education are all contained on the EDUCATION section -->
+<div id="education" data-tab-content>
+	<h2><i class="fa fa-graduation-cap"></i> Education</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in education_file %}
+			<div class="mshbox">
+				<a href="{{a.education_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.education_file.url}}">
+					<label>{{a.education_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top entertainment are all contained on the ENTERTAINMENT section -->
+<div id="entertainment" data-tab-content>
+	<h2><i class="fa fa-headphones"></i> Entertainment</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in entertainment_file %}
+			<div class="mshbox">
+				<a href="{{a.entertainment_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.entertainment_file.url}}">
+					<label>{{a.entertainment_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top fashion are all contained on the FASHION section -->
+<div id="fashion" data-tab-content>
+	<h2><i class="fa fa-dress"></i> Fashion</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in fashion_file %}
+			<div class="mshbox">
+				<a href="{{a.fashion_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.fashion_file.url}}">
+					<label>{{a.fashion_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top game are all contained on the GAME section -->
+<div id="game" data-tab-content>
+	<h2><i class="fa fa-gamepad"></i> Gaming</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in gaming_file %}
+			<div class="mshbox">
+				<a href="{{a.gaming_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.gaming_file.url}}">
+					<label>{{a.gaming_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top gdp are all contained on the GDP section -->
+<div id="gdp" data-tab-content>
+	<h2><i class="fa fa-gdp"></i> Gross Domestic Product</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in gdp_file %}
+			<div class="mshbox">
+				<a href="{{a.gdp_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.gdp_file.url}}">
+					<label>{{a.gdp_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top google are all contained on the GOOGLE section -->
+<div id="google" data-tab-content>
+	<h2><i class="fa fa-google"></i> Google</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in google_file %}
+			<div class="mshbox">
+				<a href="{{a.google_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.google_file.url}}">
+					<label>{{a.google_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top grahic are all contained on the GRAPHIC section -->
+<div id="design" data-tab-content>
+	<h2><i class="fa fa-"></i> Graphics-Design</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in gdesign_file %}
+			<div class="mshbox">
+				<a href="{{a.gdesign_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.gdesign_file.url}}">
+					<label>{{a.gdesign_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top health are all contained on the HEALTH section -->
+<div id="health" data-tab-content>
+	<h2><i class="fa fa-medkit"></i> Health Care</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in healthcare_file %}
+			<div class="mshbox">
+				<a href="{{a.healthcare_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.healthcare_file.url}}">
+					<label>{{a.healthcare_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top images are all contained on the IMAGE section -->
+<div id="images" data-tab-content>
+	<h2><i class="fa fa-image"></i> Images</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in images_file %}
+			<div class="mshbox">
+				<a href="{{a.images_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.images_file.url}}">
+					<label>{{a.images_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top jobs are all contained on the JOB section -->
+<div id="jobs" data-tab-content>
+	<h2><i class="fa fa-briefcase"></i> Jobs</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in jobs_file %}
+			<div class="mshbox">
+				<a href="{{a.jobs_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.jobs_file.url}}">
+					<label>{{a.jobs_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top mircosoft are all contained on the MICROSOFT section -->
+<div id="microsoft" data-tab-content>
+	<h2><i class="fa fa-microsoft"></i> Microsoft</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in microsoft_file %}
+			<div class="mshbox">
+				<a href="{{a.microsoft_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.microsoft_file.url}}">
+					<label>{{a.microsoft_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top movies are all contained on the MOVIES section -->
+<div id="movies" data-tab-content>
+	<h2><i class="fa fa-film"></i> Movies</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in movies_file %}
+			<div class="mshbox">
+				<a href="{{a.movies_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.movies_file.url}}">
+					<label>{{a.movies_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top music are all contained on the MUSIC section -->
+<div id="musics" data-tab-content>
+	<h2><i class="fa fa-music"></i> Musics</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in music_file %}
+			<div class="mshbox">
+				<a href="{{a.music_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.music_file.url}}">
+					<label>{{a.music_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top news are all contained on the NEWS section -->
+<div id="news" data-tab-content>
+	<h2><i class="fa fa-newspaper-o"></i> News</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in news_file %}
+			<div class="mshbox">
+				<a href="{{a.news_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.news_file.url}}">
+					<label>{{a.news_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+
+<!--Top online-dating are all contained on the ONLINE-DATING section -->
+<div id="dating" data-tab-content>
+	<h2><i class="fa fa-heart"></i> Online-Dating</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in online_dating_file %}
+			<div class="mshbox">
+				<a href="{{a.online_dating_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.online_dating_file.url}}">
+					<label>{{a.online_dating_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top onlinepay are all contained on the ONLINEPAY section -->
+<div id="onlinepay" data-tab-content>
+	<h2><i class="fa fa-money"></i> OnlinePayment</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in online_payment_file %}
+			<div class="mshbox">
+				<a href="{{a.online_payment_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.online_payment_file.url}}">
+					<label>{{a.online_payment_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top opera are all contained on the OPERA section -->
+<div id="opera" data-tab-content>
+	<h2><i class="fa fa-opera"></i> Opera</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in opera_file %}
+			<div class="mshbox">
+				<a href="{{a.opera_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.opera_file.url}}">
+					<label>{{a.opera_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top pdfs are all contained on the PDFs section -->
+<div id="pdfs" data-tab-content>
+	<h2><i class="fa fa-file"></i> Pdfs</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in pdfs_file %}
+			<div class="mshbox">
+				<a href="{{a.pdfs_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.pdfs_file.url}}">
+					<label>{{a.pdfs_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top programming are all contained on the PROGRAMMING section -->
+<div id="programming" data-tab-content>
+	<h2><i class="fa fa-desktop"></i> Programming</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in program_file %}
+			<div class="mshbox">
+				<a href="{{a.program_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.program_file.url}}">
+					<label>{{a.program_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top shopping are all contained on the SHOPPING section -->
+<div id="shopping" data-tab-content>
+	<h2><i class="fa fa-shopping-cart"></i> Shopping</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in shopping_file %}
+			<div class="mshbox">
+				<a href="{{a.shopping_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.shopping_file.url}}">
+					<label>{{a.shopping_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top social are all contained on the SOCIAL section -->
+<div id="social" data-tab-content>
+	<h2><i class="fa fa-users"></i> Social</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in social_file %}
+			<div class="mshbox">
+				<a href="{{a.social_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.social_file.url}}">
+					<label>{{a.social_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top sport are all contained on the SPORTS section -->
+<div id="sports" data-tab-content>
+	<h2><i class="fa fa-soccer-ball-o"></i> Sports</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in sports_file %}
+			<div class="mshbox">
+				<a href="{{a.sports_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.sports_file.url}}">
+					<label>{{a.sports_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top travel are all contained on the TRAVEL section -->
+<div id="travel" data-tab-content>
+	<h2><i class="fa fa-plane"></i> Travel</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in travel_file %}
+			<div class="mshbox">
+				<a href="{{a.travel_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.travel_file.url}}">
+					<label>{{a.travel_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top tvseries are all contained on the TV SERIES section -->
+<div id="tvseries" data-tab-content>
+	<h2><i class="fa fa-tv"></i> Tv Shows</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in tvshows_file %}
+			<div class="mshbox">
+				<a href="{{a.tvshows_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.tvshows_file.url}}">
+					<label>{{a.tvshows_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top videos are all contained on the VIDEO section -->
+<div id="videos" data-tab-content>
+	<h2><i class="fa fa-play-circle"></i> Videos</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in videos_file %}
+			<div class="mshbox">
+				<a href="{{a.videos_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.videos_file.url}}">
+					<label>{{a.videos_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top weather are all contained on the WEATHER section -->
+<div id="weather" data-tab-content>
+	<h2><i class="fa fa-weather"></i> Weather</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in weather_file %}
+			<div class="mshbox">
+				<a href="{{a.weather_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.weather_file.url}}">
+					<label>{{a.weather_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top webhost are all contained on the WEBHOST section -->
+<div id="webhost" data-tab-content>
+	<h2><i class="fa fa-th-"></i> Web-Hosting</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in webhost_file %}
+			<div class="mshbox">
+				<a href="{{a.webhost_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.webhost_file.url}}">
+					<label>{{a.webhost_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top wikipedia are all contained on the WIKIPEDIA section -->
+<div id="wikipedia" data-tab-content>
+	<h2><i class="fa fa-wikipedia-w"></i> Wikipedia</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in wikipedia_file %}
+			<div class="mshbox">
+				<a href="{{a.wikipedia_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.wikipedia_file.url}}">
+					<label>{{a.wikipedia_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--Top wwe are all contained on the WWE section -->
+<div id="wwe" data-tab-content>
+	<h2><i class="fa fa-wwe"></i> W W E</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in wwe_file %}
+			<div class="mshbox">
+				<a href="{{a.wwe_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.wwe_file.url}}">
+					<label>{{a.wwe_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+    
+
+<!--Top corona-info are all contained on the CORONAVIRUS INFO section -->
+<div id="corona" data-tab-content>
+	<h2><i class="fa fa-heartbeat"></i> Covid-19</h2>
+	<hr><br>
+	<div style="padding: 20px;">Coronavirus (COVID-19) Information Center. <b>Recognized Health Organizations</b></div>
+		<br>
+		<div class="mlink col-7">
+			{% for a in covid19_file %}
+			<div class="mshbox">
+				<a href="{{a.covid19_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.covid19_file.url}}">
+					<label>{{a.covid19_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+<!--For Donation are all contained on the DONATION section -->
+<div id="donate" data-tab-content>
+	<h2><i class="fa fa-donate"></i> DONATE</h2>
+	<hr>
+	<br>
+<div style="font-family: arial,sans-serif;">
+	<h3 class="mss">DONATION TO SLAYSITE</h3>
+
+	<h4 id="mabt"><u>About Slaysite</u></h4>
+	<div style="padding: 15px;">
+		<p>Slaysite is mainly developed and written for institutions, companies, organisations and individuals to
+				help enhance, protect and grant easy search and access to websites of choice and to also keep the user
+				privacy easy, clean and clear.</p>
+		
+		<p>Your donation help sustain a vibrant and diverse <b>Slaysite Community</b> and shows your support for
+				more unique features and valuable projects ahead to come. We rely on memberships, individual donations,
+				and cooperate sponsorships, as well as your support in any of this areas. No amount is too small for
+				those who are interested in donating to <b>Slaysite.</b> We appreciate in all.</p>
+	</div>
+
+	<div id="mcaa">
+		<p style="font-weight: bold; font-size: large;">After donation:</p>
+		<p>Please provide the neccessary informations below so to recieve a notification which will be sent by <b>Slaysite.</b></p>
+	</div>
+
+	<form class="mcontact"  action="#" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="mrcol">
+			<div class="minp">
+				<label>Name*</label>
+				<input type="text" name="message-name" placeholder="Enter name" required="">
+			</div>
+			<div class="minp">
+				<label>Email address*</label>
+				<input type="email" name="message-email" placeholder="Email address" required="">
+			</div>
+			<div class="minp">
+				<label>Subject*</label>
+				<textarea required="" name="message" placeholder="Enter note..."></textarea>
+			</div>
+			<input class="minp"type="submit" name="ssubmit"value="submit">
+		</div>
+	</form>
+</div>
+<br><br>
+<div class="mbooking" style="background-image: linear-gradient(rgb(1, 3, 24),rgba(7, 7, 7, 0.822)), url({% static 'images/ss.jpg' %});">
+		<div class="mupbd">
+			<h3>
+				<p style="color: #00aced;">Via Paypal</p>
+				<p>Paypal Id: itznduka@gmail.com</p>
+				<lab style="color: #00aced;">OR</lab>
+				<div class="bank-details">
+					<p>Account_Name: DIVINE MONDAY</p>
+					<p>Account_Number: 2120099674</p>
+					<p>Bank_Name: UBA BANK</p>
+				</div>
+			</h3>
+		</div>
+	</div>
+</div>
+<!-- End of the tabs -->
+</div>
+
+<a href=""id="back-to-top">Top</a>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

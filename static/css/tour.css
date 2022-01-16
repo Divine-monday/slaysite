@@ -1,0 +1,119 @@
+.tourpic{
+    padding-top: 10px;
+}
+.tbk{
+	margin-top: 18px;
+	margin-left: 15px;
+	padding: 4px 20px;
+	border-radius: 3px;
+	background-color: #F0F0F0;
+	float: left;
+    position: fixed;
+}
+.timg{
+    width: 150px;
+	display: flex;
+    margin: auto;
+}
+#tcheck{
+    display: none;
+}
+.tcheckbtn{
+    font-size: 2.5em;
+    float: left;
+    line-height: 0px;
+    margin-left: 5%;
+	margin-bottom: 9px;
+    cursor: pointer;
+    display: none;
+}
+.tcheckbtn:hover{
+	color: rgb(255, 0, 0);
+}
+navs ul{
+    background-color: #45218B;
+    text-align: center;
+}
+navs ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0% 1.6%;
+}
+navs ul li a{
+    font-weight: bold;
+    font-family: Verdena,sans-serif;
+}
+.tl{
+    padding: 6px 40px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 15%;
+    border-radius: 20px;
+}
+.tl:hover{
+	border-bottom: 1px solid red;
+    transition: 1s;
+}
+
+@media screen and (max-width:943px){ 
+    .tcheckbtn{
+        display: block;
+    }
+    #navs{
+        position: fixed;
+        width: 100%;
+        top: 6.7em;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    navs ul li{
+        display: block;
+        font-size: 15px;
+        font-family: arial,sans-serif;
+        text-transform: uppercase;
+    }
+    #tcheck:checked ~ ul {
+        left: 0;
+    }
+}
+
+
+.theader{
+    /* background-image: linear-gradient(rgb(1, 3, 24),rgba(7, 7, 7, 0)), url("{% url static 'images/index1.jpg'%}"); */
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+.tbackground{
+	width: 100%;
+}
+.theads{
+    color: grey;
+    letter-spacing: 1px;
+    margin-top: 0.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.tmovimg{
+	width: 40%;
+	height: 100px;
+}
+.tallvid{
+	display: flex;
+	flex-wrap: wrap;
+}
+.txtitle{
+	margin-right: 3%;
+	width: 280px;
+	padding: 22px;
+}
+.tvids{
+	width: 280px;
+	height: 180px;
+}

@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<title>Slaysite Home - Slaysite</title>
+<body>
+    <div class="all">
+        <div class="bbtn" onclick="check()">Theme</div>
+        <div class="hlogo">
+            <img class="hsiteimg" src="{% static '/images/slaysite.png' %}">
+        </div>
+	</div>
+<br>
+
+<!-- upload searches via admin panel and working perfectly -->
+<center>
+	<div class="hsinput">
+		{% for i in searchbox_title %}
+			<form action="{{i.searchbox_url}}" method="GET" target="_blank">
+				{% csrf_token %}
+				<input type="text" id="hput" name="q" placeholder="{{i.searchbox_title}}" required="">
+				<input type="submit" class="hsub" value="Search">
+			</form>
+		{% endfor %}
+	</div> 
+</center>
+<!-- End of upload searches via admin panel and working perfectly -->
+	
+	<div class="htour">
+		<a href="{% url 'about' %}"><button class="habout">About</button></a>
+		<a href="{% url 'tour' %}" onclick="myTour()"><button class="hfind">Find Your Next Tour</button></a>
+	</div>
+
+<!-- Home Page Upload from admin panel -->
+	<div class="" id="happs">
+		{% for h in homeicon_file %}
+		<div class="hcol">
+			<div class="hbox" id="hbox1">{{h.homeicon_title}}</div>
+	
+			<images style="width: 100%; height: 75%;" controls="controls">
+				<a href="{{h.homeicon_url}}" target="_blank">
+					<img class="himgs" src="{{h.homeicon_file.url}}"/>
+				</a>
+			</images>
+		</div>
+		{% endfor %}
+	</div>
+<!-- End of Home Page Upload from admin panel -->
+
+<hr class="hr">
+	<div class="hbtn">
+		<a href="{% url 'main' %}">
+			<img class="himgs" src="{% static '/images/house.png' %}" title="Click To MainPage">
+		</a>
+	</div>
+
+
+<!-- other sections like ads -->
+<div class="hfooter">
+    <p> Copyright &copy 2022 Slaysite.</p>
+</div>
+<br><br><br>
+</body>
+ 
+{% endblock %}

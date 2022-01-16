@@ -1,0 +1,143 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<title>About - Slaysite</title>
+
+{% for m in abouticon_file %}
+<div class="aheader" style="background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url({{m.abouticon_file.url}});">
+    {% endfor %}
+    <div class="anavbar">
+        <div class="alogo">
+            <div class="mimg2">
+                {% for m in slaysiteicon_file %}
+                <span>
+                    <img class="msimg" src="{{m.slaysiteicon_file.url}}">
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+  
+    <ul>
+        <li><a href="{% url 'main' %}"><i class="fa fa-"></i> Home</a></li>
+        <li><a href="#about"><i class="fab fa-"></i>About</a></li>
+         <!-- <li><a href="#services"><i class="fab fa-t"></i>Services</a></li> -->
+        <li><a href="#asocial"><i class="fa fa-"></i>Socials</a></li>
+        <li><a href="#acontacts"><i class="fa fa-"></i>Contacts</a></li>
+         <!-- dropdown menu of our team,other sites --> 
+        <li><a href="#amore"><i class="fab fa-t"></i>More</a></li>
+    </ul>
+</div>
+    <div class="alname">
+        <h1>Slaysite</h1>
+        <p>slay with slaysite</p>
+    </div> 
+<br>
+    <a href="{% url 'home' %}"class="button">Slaysite.com</a>
+</div>
+
+
+<div class="article">
+    <div class="about"id="about">
+        <h3 id="about"style="">About Us</h3>
+            <p>Slaysite Inc. As a company with great vision is a Nigerian Technology Company that specializes in internet-related services and product.
+                Based in the Federal Capital Territory (FCT) Abuja Nigeria.
+                <!--  Slaysite is the first project that was developed by SlaySite.  -->
+        
+        <h3 id="about"style="">*About Slaysite*</h3>
+            <p>The best books are on the internet. The best teachers are on the internet, but the best innovations and ideas can change who we are.
+                Slaysite is where all these ideas take shape, take off and put together to grant easy way to search your thinking on any topic on the web. 
+                Here you discover different websites on different topics based on your choice. 
+                Our purpose is to open, spread and create a system to everyone and promote substance and authenticity with deeper connections between 
+                readers, those who pursue knowledge, researchers and writers can lead to discovering and growth. 
+                Anyone can use Slaysite as it is mainly developed and written for institutions, companies, organizations and individuals 
+                to help enhance, protect and grant an easy way to access or search topics on different websites in easy and in comfort.</p>
+
+        <h3 id="about"style="">*Highlight*</h3>
+            <p>Visit our company page on the social platform provided below for the latest news, project updates, and tips and tricks. 
+            Please click the button below or click on any social icons.</p>
+			<button style="border: none;"><a href="https://fb.me/Slaysite">CLICK NOW</a></button>
+		<h3 id="about"style="">*Report problem*</h3>
+			<p>For any problems, errors and corrections please be willing to report the problems so it could be responded to quickly.</p>
+    </div>
+    <div class="aborder"></div>
+    <div class="asocial"id="asocial">
+        <h4 style="text-align: center;">Follow us</h4>
+        <div class="aic"><a href="https://fb.me/Slaysite" target="_blank"><i class="fa fa-facebook"style="background-color:blue"></i>facebook</a></div><br>
+        <div class="aic"><a href="https://twitter.com/slaysite/" target="_blank"><i class="fa fa-twitter"style="background-color:blue"></i>twitter</a></div><br>
+        <div class="aic"><a href="#" target="_blank"><i class="fa fa-instagram"style="background-color:red"></i>instagram</a></div><br>
+        <div class="aic"><a href="https://wa.me/+2349024666659" target="_blank"><i class="fa fa-whatsapp"style="background-color:green"></i>whatsapp</a></div><br>
+    </div>
+</div>
+
+    <!-- team pictures --> 
+    <div class="acontainer">
+        <h1>our team</h1>
+        <div class="amodal">
+            <div class="adiv-img">
+                <a href="{% static 'images/divine.jpg' %}" target="_blank">
+                    <img src="{% static 'images/divine.jpg' %}"width="300"height="">
+                </a>
+                <div>
+                    <label style="font-size: large;">CEO:</label>
+                    <label style="font-size: large; font-family: Elephant;">Divine Monday</label>
+                    <br>
+                    <label style="font-weight: bold;">
+                        <a style="color: #CC0066;">D</a>
+                        <a style="color: blue;">I</a>
+                        <a style="color: #CC0066;;">V</a>
+                        <a style="color: blue;">I</a>
+                        <a style="color: #CC0066;;">N</a>
+                        <a style="color: blue;">E</a>
+                        <a style="color: #CC0066;;">- M</a>
+                        <a style="color: blue;">O</a>
+                        <a style="color: #CC0066;;">N</a>
+                        <a style="color: blue;">D</a>
+                        <a style="color: #CC0066;;">A</a>
+                        <a style="color: blue;">Y</a>
+                    </label>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<!-- Form and contact side on the about page -->
+<form class="acontact" id="acontacts" action="#" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="alcol">
+        <h1>Contact us</h1>
+        <address><i class="fa fa-map-marker ">:</i>&nbsp;&nbsp;FCT Abuja, Nigeria</address>
+            <p><i class="fa fa-phone ">:</i>&nbsp;&nbsp;+2349024666659</p>
+        <p><i class="fa fa-envelope">:</i>&nbsp;&nbsp;slaysite@gmail.com</p>
+    </div>
+    <div class="arcol">
+    
+        <div class="ainp">
+            <label>Name*</label>
+            <input type="text" name="message-name" required="">
+        </div>
+        <div class="ainp">
+            <label>Email address*</label>
+            <input type="email" name="message-email" required="">
+        </div>
+        <div class="ainp">
+            <label>Subject*</label>
+            <textarea required="" name="message"></textarea>
+        </div>
+        <input class="ainp"type="submit" name="ssubmit"value="submit">
+    </div>
+</form>
+
+<br>
+<!-- other sections like ads -->
+<div class="afooter">
+    <p> Copyright &copy 2022 Slaysite.</p>
+</div>
+
+
+
+<a href=""id="back-to-top">Top</a>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
