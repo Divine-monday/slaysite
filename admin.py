@@ -2,9 +2,9 @@ from django.contrib import admin
 
 
 # Register your models here.
-from .models import (AboutIcons, SearchBox, HomeIcons, SlaysiteIcons, News_article, Web, Koinonia, Koinonia_Others, 
-Hillsong, Amazon, Apps, Arts, AudioBook, AutoMobiles, Banking, Bcosmetics, Birthday, Books, Browsers, Cartoons, Cfood, 
-Disney, Education, Entertainment, Fashion, Gaming, Gdp, Google, Gdesign, HealthCare, Images, Jobs, Microsoft, Movies, 
+from .models import (AboutIcons, SearchBox, HomeIcons, SlaysiteIcons, News_article, Web, KoinoniaVideo, Koinonia, KoinoniaVidAMO, 
+KoinoniaAMO, Koinonia_Others, Hillsong, Amazon, Apps, Arts, AudioBook, AutoMobiles, Banking, Bcosmetics, Birthday, Books, Browsers,
+Cartoons, Cfood, Disney, Education, Entertainment, Fashion, Gaming, Gdp, Google, Gdesign, HealthCare, Images, Jobs, Microsoft, Movies, 
 Music, News, OnlineDating, OnlinePayment, Opera, Pdfs, Programming, Shopping, Social, Sports, Travel, Tv_Shows, Videos,
 Weather, WebHosting, Wikipedia, WWE, Covid_19, AboutIcons, TourAll, TourMovies, TourMusics, TourSports, TourNews, TourGames)
 
@@ -13,7 +13,10 @@ admin.site.register(HomeIcons)
 admin.site.register(SlaysiteIcons)
 admin.site.register(News_article)
 admin.site.register(Web)
+admin.site.register(KoinoniaVideo)
 admin.site.register(Koinonia)
+admin.site.register(KoinoniaVidAMO)
+admin.site.register(KoinoniaAMO)
 admin.site.register(Koinonia_Others)
 admin.site.register(Hillsong)
 admin.site.register(Amazon)

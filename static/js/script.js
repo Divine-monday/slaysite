@@ -13,7 +13,7 @@ tabs.forEach(tab => {
 })
 
 
-
+// Back to top javascript code ****************//
 var btt =document.getElementById('back-to-top'),
 		body =document.body,
 		docelen = document.documentElement,

@@ -7,11 +7,11 @@ import json
 import pdb
 
 from .models import (AboutIcons, Banking, Programming, SearchBox, HomeIcons, SlaysiteIcons, News_article, Sports, 
-Web, Koinonia, Koinonia_Others, Hillsong, Amazon, Apps, Arts, AudioBook, AutoMobiles, Banking, Bcosmetics, Birthday, 
-Books, Browsers, Cartoons, Cfood, Disney, Education, Entertainment, Fashion, Gaming, Gdp, Google, Gdesign, HealthCare,
-Images, Jobs, Microsoft, Movies, Music, News, OnlineDating, OnlinePayment, Opera, Pdfs, Programming, Shopping, Social,
-Sports, Travel, Tv_Shows, Videos, Weather, WebHosting, Wikipedia, WWE, Covid_19, TourAll, TourMovies, TourMusics, TourSports,
-TourNews, TourGames)
+Web, KoinoniaVideo, Koinonia, KoinoniaVidAMO, KoinoniaAMO, Koinonia_Others, Hillsong, Amazon, Apps, Arts, AudioBook, 
+AutoMobiles, Banking, Bcosmetics, Birthday, Books, Browsers, Cartoons, Cfood, Disney, Education, Entertainment, Fashion,
+Gaming, Gdp, Google, Gdesign, HealthCare, Images, Jobs, Microsoft, Movies, Music, News, OnlineDating, OnlinePayment, Opera, 
+Pdfs, Programming, Shopping, Social, Sports, Travel, Tv_Shows, Videos, Weather, WebHosting, Wikipedia, WWE, Covid_19, TourAll, 
+TourMovies, TourMusics, TourSports, TourNews, TourGames)
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -38,7 +38,10 @@ def main_view(request, *args, **kwargs):
     slaysite = SlaysiteIcons.objects.all()
     newsarticlelink = News_article.objects.all()
     web_links = Web.objects.all()
+    koinoniavid_links = KoinoniaVideo.objects.all()
     koinonia_links = Koinonia.objects.all()
+    koinoniavidamo_links = KoinoniaVidAMO.objects.all()
+    koinoniaamo_links = KoinoniaAMO.objects.all()
     koothers_links = Koinonia_Others.objects.all()
     hillsong_links = Hillsong.objects.all()
     amazon_links = Amazon.objects.all()
@@ -90,7 +93,10 @@ def main_view(request, *args, **kwargs):
         "slaysiteicon_file": slaysite,
         "news_article_file": newsarticlelink,
         "web_file": web_links,
+        "koinoniavid_file": koinoniavid_links,
         "koinonia_file": koinonia_links,
+        "koinoniavidamo_file": koinoniavidamo_links,
+        "koinoniaamo_file": koinoniaamo_links,
         "koothers_file": koothers_links,
         "hillsong_file": hillsong_links,
         "amazon_file": amazon_links,

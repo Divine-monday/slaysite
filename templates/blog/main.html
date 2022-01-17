@@ -1,8 +1,8 @@
 {% extends "blog/base.html" %}
-
 {% load static %}
-
+{% block meta_description %}This is the number one best website of Slaysite and the world most used.{% endblock %}">
 {% block content %}
+
 <title>Slaysite - Easy access to different websites</title>
 <center>
 	{% if messages %}
@@ -140,7 +140,20 @@
 <!--Top eni are all contained on the ENI section -->
 <div id="eni" data-tab-content>
 	<h2><i class="fa fa-eni"></i> Eternity Network International</h2>
-	<hr><br><br>
+	<hr>
+	<br><br>
+		<div class="allvid">
+			{% for x in koinoniavid_file %}
+		
+			<div class="xtitle">
+				<div class="">{{x.koinoniavideo_title}}</div>
+				<a href="{{x.koinoniavid_video.url}}">
+					<img class="vids" src="{{x.koinoniavid_file.url}}">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br>
 		<div class="mlink col-7">
 			{% for a in koinonia_file %}
 			<div class="mshbox">

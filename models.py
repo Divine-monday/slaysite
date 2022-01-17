@@ -80,6 +80,26 @@ class Web(models.Model):
             img.save(self.web_file.path)
 
 
+
+# # Koinoniavid Video_models
+class KoinoniaVideo(models.Model):
+    koinoniavid_title =  models.CharField(max_length=100)
+    koinoniavid_video = models.FileField(upload_to="Koinoniavid/%y", default="")
+    koinoniavid_file = models.ImageField(default='default.png', blank=True, upload_to="Koinoniavid")
+
+    def __str__(self):
+        return self.koinoniavid_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.koinoniavid_file.path)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.koinoniavid_file.path)
+
+
+
 # Koinonia models would be here
 class Koinonia(models.Model):
     koinonia_title =  models.CharField(max_length=100)
@@ -98,6 +118,45 @@ class Koinonia(models.Model):
             img.save(self.koinonia_file.path)
 
 
+# Koinnonia Apostle Michael O
+class KoinoniaVidAMO(models.Model):
+    koinoniavidamo_title =  models.CharField(max_length=100)
+    koinoniavidamo_video = models.FileField(upload_to="Koinoniavidamo/%y", default="")
+    koinoniavidamo_file = models.ImageField(default='default.png', blank=True, upload_to="Koinoniavidamo")
+
+    def __str__(self):
+        return self.koinoniavid_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.koinoniavidamo_file.path)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.koinoniavidamo_file.path)
+
+
+
+# KoinoniaAMO models would be here
+class KoinoniaAMO(models.Model):
+    koinoniaamo_title =  models.CharField(max_length=100)
+    koinoniaamo_url = models.URLField()
+    koinoniaamo_file = models.ImageField(default='default.png', blank=True, upload_to="koinoniaamo_icons")
+
+    def __str__(self):
+        return self.koinoniaamo_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.koinoniaamo_file.path)
+        if img.height > 50 or img.width > 50:
+            output_size = (50, 50)
+            img.thumbnail(output_size)
+            img.save(self.koinoniaamo_file.path)
+
+
+
+# # Koinonia_models
 class Koinonia_Others(models.Model):
     koothers_title =  models.CharField(max_length=100)
     koothers_url = models.URLField()
