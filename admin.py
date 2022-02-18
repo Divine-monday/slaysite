@@ -3,10 +3,10 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import (AboutIcons, SearchBox, HomeIcons, SlaysiteIcons, News_article, Web, KoinoniaVideo, Koinonia, KoinoniaVidAMO, 
-KoinoniaAMO, Koinonia_Others, Hillsong, Amazon, Apps, Arts, AudioBook, AutoMobiles, Banking, Bcosmetics, Birthday, Books, Browsers,
-Cartoons, Cfood, Disney, Education, Entertainment, Fashion, Gaming, Gdp, Google, Gdesign, HealthCare, Images, Jobs, Microsoft, Movies, 
+KoinoniaAMO, Koinonia_Others, Hillsong, Gospel, Amazon, Apps, Arts, AudioBook, AutoMobiles, Banking, Bcosmetics, Birthday, Books, Browsers,
+Cartoons, Cfood, Crypto, Disney, Education, Entertainment, Fashion, Gaming, Gdp, Google, Gdesign, HealthCare, ICT, Images, Jobs, Microsoft, Movies, 
 Music, News, OnlineDating, OnlinePayment, Opera, Pdfs, Programming, Shopping, Social, Sports, Travel, Tv_Shows, Videos,
-Weather, WebHosting, Wikipedia, WWE, Covid_19, AboutIcons, TourAll, TourMovies, TourMusics, TourSports, TourNews, TourGames)
+Wallet, Weather, WebHosting, Wikipedia, WWE, Covid_19, AboutIcons, TourAll, TourMovies, TourMusics, TourSports, TourNews, TourGames)
 
 admin.site.register(SearchBox)
 admin.site.register(HomeIcons)
@@ -19,6 +19,7 @@ admin.site.register(KoinoniaVidAMO)
 admin.site.register(KoinoniaAMO)
 admin.site.register(Koinonia_Others)
 admin.site.register(Hillsong)
+admin.site.register(Gospel)
 admin.site.register(Amazon)
 admin.site.register(Apps)
 admin.site.register(Arts)
@@ -31,6 +32,7 @@ admin.site.register(Books)
 admin.site.register(Browsers)
 admin.site.register(Cartoons)
 admin.site.register(Cfood)
+admin.site.register(Crypto)
 admin.site.register(Disney)
 admin.site.register(Education)
 admin.site.register(Entertainment)
@@ -40,6 +42,7 @@ admin.site.register(Gdp)
 admin.site.register(Google)
 admin.site.register(Gdesign)
 admin.site.register(HealthCare)
+admin.site.register(ICT)
 admin.site.register(Images)
 admin.site.register(Jobs)
 admin.site.register(Microsoft)
@@ -57,6 +60,7 @@ admin.site.register(Sports)
 admin.site.register(Travel)
 admin.site.register(Tv_Shows)
 admin.site.register(Videos)
+admin.site.register(Wallet)
 admin.site.register(Weather)
 admin.site.register(WebHosting)
 admin.site.register(Wikipedia)

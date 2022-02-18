@@ -1,9 +1,8 @@
 {% extends "blog/base.html" %}
 {% load static %}
-{% block meta_description %}This is the number one best website of Slaysite and the world most used.{% endblock %}">
+{% block meta_description %}This is the number one best website of Dzipup and the world most used.{% endblock %}">
 {% block content %}
 
-<title>Slaysite - Easy access to different websites</title>
 <center>
 	{% if messages %}
 		{% for message in messages %}
@@ -19,14 +18,14 @@
             <a href="{% url 'home' %}" title="Back to Home Page">
                 <img class="msimg" src="{{m.slaysiteicon_file.url}}">
             </a>
-                <small style="font-size: 14px;
+                <!-- <small style="font-size: 14px;
                                 font-family: Arial,sans-serif;
 								font-weight: bold; 
-                                margin-left: 2px;">{{data.country}}</small>
+                                margin-left: 2px;">{{data.country}}</small> -->
         </span>
     {% endfor %}
     <h1 class="mh"><a href="{% url 'about' %}"><button><b>About Us</b></button></a>
-        <div class="pactive">active</div>
+        <div class="pctive">active</div>
     </h1>
 </div>
 
@@ -34,9 +33,10 @@
 <br>
     <ul>
         <li><a href="#" data-tab-target="#web">-<i class="fa fa-globe"></i> Web-</a></li>
-        <li><a href="#" data-tab-target="#top">-<i class="fa fa-home"></i> Top 10-</a></li>
+        <li><a href="#" data-tab-target="#tops">-<i class="fa fa-home"></i> Top 10-</a></li>
         <li><a href="#" data-tab-target="#eni">-<i class="fa fa-eni"></i> <b>KOINONIA-</b></a></li>
-        <li><a href="#" data-tab-target="#hill">-<i class="fa fa-hill"></i> <b>Hillsong-</b></a></li>
+        <li><a href="#" data-tab-target="#hill">-<i class="fa fa-hill"></i> <b>HILLSONG-</b></a></li>
+        <li><a href="#" data-tab-target="#gospel">-<i class="fa fa-gospel"></i> <b>GOSPEL-</b></a></li>
         <li><a href="#" data-tab-target="#amazon">-<i class="fa fa-amazon"></i> Amazon-</a></li>
         <li><a href="#" data-tab-target="#app">-<i class="fa fa-th-large"></i> Apps-</a></li>
         <li><a href="#" data-tab-target="#art">-<i class="fa fa-paint-brush"></i> Art-</a></li>
@@ -49,6 +49,7 @@
         <li><a href="#" data-tab-target="#browser">-<i class="fa fa-recycle"></i> Browsers-</a></li>
         <li><a href="#" data-tab-target="#cartoon">-<i class="fa fa-cubes"></i> Cartoons-</a></li>
         <li><a href="#" data-tab-target="#cooking">-<i class="fa fa-cutlery"></i> Cooking & Food-</a></li>
+        <li><a href="#" data-tab-target="#crypto">-<i class="fa fa-crypto"></i> Crypto-</a></li>
         <li><a href="#" data-tab-target="#disney">-<i class="fa-amazon-disney"></i> Disney-</a></li>
         <li><a href="#" data-tab-target="#education">-<i class="fa fa-graduation-cap"></i> Education-</a></li>
         <li><a href="#" data-tab-target="#entertainment">-<i class="fa fa-headphones"></i> Entertainm­ent-</a></li>
@@ -58,6 +59,7 @@
         <li><a href="#" data-tab-target="#google">-<i class="fa fa-google"></i> Google-</a></li>
         <li><a href="#" data-tab-target="#design">-<i class="fa fa-splotch"></i> Grahpics-Design-</a></li>
         <li><a href="#" data-tab-target="#health">-<i class="fa fa-medkit"></i> Health Care-</a></li>
+        <li><a href="#" data-tab-target="#ict">-<i class="fa fa-ict"></i> ICT-</a></li>
         <li><a href="#" data-tab-target="#images">-<i class="fa fa-image"></i> Images-</a></li>
         <li><a href="#" data-tab-target="#jobs">-<i class="fa fa-briefcase"></i> Jobs-</a></li>
         <li><a href="#" data-tab-target="#microsoft">-<i class="fa fa-windows"></i> Microsoft-</a></li>
@@ -75,6 +77,7 @@
         <li><a href="#" data-tab-target="#travel">-<i class="fa fa-plane"></i> Travel-</a></li>
         <li><a href="#" data-tab-target="#tvseries">-<i class="fa fa-tv"></i> TV Shows-</a></li>
         <li><a href="#" data-tab-target="#videos">-<i class="fa fa-play-circle"></i> Videos-</a></li>
+        <li><a href="#" data-tab-target="#wallet">-<i class="fa fa-wallet"></i> Wallet-</a></li>
         <li><a href="#" data-tab-target="#weather">-<i class="fa fa-cloud"></i> Weather-</a></li>
         <li><a href="#" data-tab-target="#webhost">-<i class="fa fa-webhost"></i> Web-Hosting-</a></li>
         <li><a href="#" data-tab-target="#wikipedia">-<i class="fa fa-wikipedia-w"></i> Wikipedia-</a></li>
@@ -87,7 +90,7 @@
 <br>
 <!-- search level -->
 <center>
-    <h1>Where to next?</h1>
+    <h2 style="font: 25px cursive">Where to next?</h2>
     <div class="msearch" id="msid">
         <form action="https://www.google.com/search" method="GET" target="_blank" class="msput">
             <input type="text" name="q" placeholder="Search GOOGLE or enter web address" required="" autocomplete="off" class="msinput">
@@ -98,22 +101,23 @@
 
 <!--apps and other -->
 <div class="tab-content">
-<div id="top" id="apps" data-tab-content class="active">
-	<h2><i class="fa fa-home"></i> Top 10</h2>
-	<hr>
-    <div class="" id="top">
-        {% for i in news_article_file %}
-        <div class="mbox col-5" id="box13">
-            <navs class="news_head">{{i.news_article_head}}</navs>
-            <div class="mhbox">{{i.news_article_title}}</div>
-            <images style="width: 100%; height: 75%;" controls="controls">
-                <a href="{{i.news_article_url}}" target="_blank">
-                    <img class="mupimg" src="{{i.news_article_file.url}}"/>
-                </a>
-            </images>
-        </div>
-    {% endfor %}
-    </div>
+<div id="tops" data-tab-content class="active">
+	<h2><i class="fa fa-home"></i> Top 10</h2>	
+	<hr>	
+	<!-- Upload from admin panel -->
+	<div class="" id="tops">
+		{% for i in news_article_file %}
+		<div class="mbox col-5" id="box13">
+			<navs class="news_head">{{i.news_article_head}}</navs>
+			<div class="mhbox">{{i.news_article_title}}</div>
+			<images style="width: 100%; height: 75%;" controls="controls">
+				<a href="{{i.news_article_url}}" target="_blank">
+					<img class="mupimg" src="{{i.news_article_file.url}}"/>
+				</a>
+			</images>
+		</div>
+	{% endfor %}
+	</div>
 <br><br><br>
 </div>
 
@@ -165,6 +169,32 @@
 			{% endfor %}
 		</div>
 	<br><br>
+<h2><i class="fa fa-sph"></i> Apostle Mike</h2>
+	<hr><br><br>
+		<div class="allvid">
+			{% for x in koinoniavidamo_file %}
+		
+			<div class="xtitle">
+				<div class="">{{x.koinoniavidamo_title}}</div>
+				<a href="{{x.koinoniavidamo_video.url}}">
+					<img class="vids" src="{{x.koinoniavidamo_file.url}}">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br>
+		<div class="mlink col-7">
+			{% for a in koinoniaamo_file %}
+			<div class="mshbox">
+				<a href="{{a.koinoniaamo_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.koinoniaamo_file.url}}">
+					<label>{{a.koinoniaamo_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br>
+
 <h2><i class="fa fa-sph"></i> Spirit Word House</h2>
 	<hr><br><br>
 		<div class="mlink col-7">
@@ -182,7 +212,7 @@
 
 
 
-<!--Top amazon are all contained on the AMAZON section -->
+<!--Top hillsong are all contained on the HILLSONG section -->
 <div id="hill" data-tab-content>
 	<h2><i class="fa fa-hillsong"></i> Hillsong United</h2>
 		<hr>
@@ -199,6 +229,28 @@
 		</div>
 	<br><br><br>
 </div>
+
+
+
+<!--Top gospel are all contained on the GOSPEL section -->
+<div id="gospel" data-tab-content>
+	<h2><i class="fa fa-gospel"></i> Gospel</h2>
+		<hr>
+		<br><br>
+		<div class="allvid">
+			{% for x in gospel_file %}
+		
+			<div class="xtitle">
+				<div class="">{{x.gospel_title}}</div>
+				<a href="{{x.gospel_video.url}}">
+					<img class="vids" src="{{x.gospel_file.url}}">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
 
 
 <!--Top amazon are all contained on the AMAZON section -->
@@ -279,7 +331,7 @@
 
 <!--Top automotive are all contained on the MOBILE section -->
 <div id="auto" data-tab-content>
-	<h2><i class="fa fa-automotives"></i> Auto-Mobiles</h2>
+	<h2><i class="fa fa-automobile"></i> Auto-Mobiles</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -336,7 +388,7 @@
 
 <!--Top Birthday are all contained on the BIRTHDAY section -->
 <div id="birthday" data-tab-content>
-	<h2><i class="fa fa-birthday"></i> Birthday-Wishes</h2>
+	<h2><i class="fa fa-gift"></i> Birthday-Wishes</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -393,7 +445,7 @@
 
 <!--Top catoon are all contained on the CARTOONS section -->
 <div id="cartoon" data-tab-content>
-	<h2><i class="fa fa-cat"></i> Cartoons</h2>
+	<h2><i class="fa fa-cubes"></i> Cartoons</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -429,9 +481,30 @@
 </div>
 
 
+
+<!--Top crypto are all contained on the CRYTO section -->
+<div id="crypto" data-tab-content>
+	<h2><i class="fa fa-crypto"></i> Crypto</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in crypto_file %}
+			<div class="mshbox">
+				<a href="{{a.crypto_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.crypto_file.url}}">
+					<label>{{a.crypto_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+
 <!--Top disney are all contained on the DISNEY section -->
 <div id="disney" data-tab-content>
-	<h2><i class="fa fa-disney"></i> Disney</h2>
+	<h2><i class="fa fa-amazon-disney"></i> Disney</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -488,7 +561,7 @@
 
 <!--Top fashion are all contained on the FASHION section -->
 <div id="fashion" data-tab-content>
-	<h2><i class="fa fa-dress"></i> Fashion</h2>
+	<h2><i class="fa fa-tshirt"></i> Fashion</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -564,7 +637,7 @@
 
 <!--Top grahic are all contained on the GRAPHIC section -->
 <div id="design" data-tab-content>
-	<h2><i class="fa fa-"></i> Graphics-Design</h2>
+	<h2><i class="fa fa-splotch"></i> Graphics-Design</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -598,6 +671,27 @@
 		</div>
 	<br><br><br>
 </div>
+
+
+
+<!--Top Ict are all contained on the ICT section -->
+<div id="ict" data-tab-content>
+	<h2><i class="fa fa-ict"></i> ICT</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in ict_file %}
+			<div class="mshbox">
+				<a href="{{a.ict_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.ict_file.url}}">
+					<label>{{a.ict_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
 
 
 <!--Top images are all contained on the IMAGE section -->
@@ -640,7 +734,7 @@
 
 <!--Top mircosoft are all contained on the MICROSOFT section -->
 <div id="microsoft" data-tab-content>
-	<h2><i class="fa fa-microsoft"></i> Microsoft</h2>
+	<h2><i class="fa fa-windows"></i> Microsoft</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -924,9 +1018,29 @@
 </div>
 
 
+<!--Top Wallet are all contained on the WALLET section -->
+<div id="wallet" data-tab-content>
+	<h2><i class="fa fa-wallet"></i> Wallet</h2>
+		<hr>
+		<br><br>
+		<div class="mlink col-7">
+			{% for a in wallet_file %}
+			<div class="mshbox">
+				<a href="{{a.wallet_url}}" target="_blank">
+					<img class="miconimgs" src="{{a.wallet_file.url}}">
+					<label>{{a.wallet_title}}</label>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	<br><br><br>
+</div>
+
+
+
 <!--Top weather are all contained on the WEATHER section -->
 <div id="weather" data-tab-content>
-	<h2><i class="fa fa-weather"></i> Weather</h2>
+	<h2><i class="fa fa-cloud"></i> Weather</h2>
 		<hr>
 		<br><br>
 		<div class="mlink col-7">
@@ -1022,45 +1136,45 @@
 
 <!--For Donation are all contained on the DONATION section -->
 <div id="donate" data-tab-content>
-	<h2><i class="fa fa-donate"></i> DONATE</h2>
+	<h2><i class="fa fa-heart"></i> DONATE</h2>
 	<hr>
 	<br>
 <div style="font-family: arial,sans-serif;">
-	<h3 class="mss">DONATION TO SLAYSITE</h3>
+	<h3 class="mss">Donation To Dzipup</h3>
 
-	<h4 id="mabt"><u>About Slaysite</u></h4>
+	<h4 id="mabt"><u>About Dzipup</u></h4>
 	<div style="padding: 15px;">
-		<p>Slaysite is mainly developed and written for institutions, companies, organisations and individuals to
+		<p>Dzipup is mainly developed and written for institutions, companies, organisations and individuals to
 				help enhance, protect and grant easy search and access to websites of choice and to also keep the user
 				privacy easy, clean and clear.</p>
 		
-		<p>Your donation help sustain a vibrant and diverse <b>Slaysite Community</b> and shows your support for
+		<p>Your donation help sustain a vibrant and diverse <b>Dzipup Community</b> and shows your support for
 				more unique features and valuable projects ahead to come. We rely on memberships, individual donations,
 				and cooperate sponsorships, as well as your support in any of this areas. No amount is too small for
-				those who are interested in donating to <b>Slaysite.</b> We appreciate in all.</p>
+				those who are interested in donating to <b>Dzipup.</b> We appreciate in all.</p>
 	</div>
 
 	<div id="mcaa">
 		<p style="font-weight: bold; font-size: large;">After donation:</p>
-		<p>Please provide the neccessary informations below so to recieve a notification which will be sent by <b>Slaysite.</b></p>
+		<p>Please provide the neccessary informations below so to recieve a notification which will be sent by <b>Dzipup.</b></p>
 	</div>
 
-	<form class="mcontact"  action="#" method="POST" enctype="multipart/form-data">
+	<form class="mcontact" method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		<div class="mrcol">
 			<div class="minp">
 				<label>Name*</label>
-				<input type="text" name="message-name" placeholder="Enter name" required="">
+				<input type="text" name="message-name" id="textarea" placeholder="Enter name" required="">
 			</div>
 			<div class="minp">
 				<label>Email address*</label>
-				<input type="email" name="message-email" placeholder="Email address" required="">
+				<input type="email" name="message-email" id="textarea" placeholder="Email address" required="">
 			</div>
 			<div class="minp">
 				<label>Subject*</label>
-				<textarea required="" name="message" placeholder="Enter note..."></textarea>
+				<textarea name="message-subject" id="textarea" placeholder="Enter note..."></textarea>
 			</div>
-			<input class="minp"type="submit" name="ssubmit"value="submit">
+			<input class="minp" type="submit" id="submit" value="Submit">
 		</div>
 	</form>
 </div>
@@ -1082,6 +1196,7 @@
 </div>
 <!-- End of the tabs -->
 </div>
+
 
 <a href=""id="back-to-top">Top</a>
 <script src="{% static 'js/script.js' %}"></script>

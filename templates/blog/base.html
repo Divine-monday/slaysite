@@ -7,7 +7,7 @@
 	{% endblock %}
 	<meta charset="utf-8">
 	<meta name="description" content="{% block meta_description %}
-		Welcome to the World Most 22th Century Search Engine
+		Welcome to the World Most 22th Century Browser & Search Engine
 	{% endblock %}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="keywords" content="search">
@@ -77,39 +77,44 @@
 	<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'css/about.css' %}">
 	<link rel="stylesheet" href="{% static 'css/tour.css' %}">
-	<link rel="shortcut icon" href="{% static 'images/siteicon.png' %}">
+	<link rel="shortcut icon" href="{% static 'images/d.png' %}">
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<noscript>Sorry! Your browser does not support JavaScript!</noscript>
+	{% if title %}
+		<title>Dzipup Web Browser - {{ title }}</title>
+	{% else %}
+		<title>Dzipup Web Browser</title>
+	{% endif %}
+
 	<style>
 		/* 202124 */
-	.theme-Dark{
-	    background-color: #131927;
-	    transition: 0.8s;
-	    color: white;
- 	}
-	.bbtn{
-		margin-top: 1%;
-		margin-left: 80%;
-		margin-bottom: 0;
-		padding: 5px;
-		background-color: #f8f9fa;
-		border: 1px solid #f8f9fa;
-		border-radius: 4px;
-		color: #3c4043;
-		cursor: pointer;
-		font-family: arial,sans-serif;
-		width: 80px;
-	}
-	.bbtn:hover{
-		border: 1.5px solid #dadce0;
-	}
-	body, a, label, button, .bbtn, input{
-		cursor: url({% static 'images/cursor.png' %})0 0,
-		default !important;
-	}
-
+		.theme-Dark{
+			background-color: #131927;
+			transition: 0.8s;
+			color: white;
+		}
+		.bbtn{
+			margin-top: 1%;
+			margin-left: 80%;
+			margin-bottom: 0;
+			padding: 5px;
+			background-color: #f8f9fa;
+			border: 1px solid #f8f9fa;
+			border-radius: 4px;
+			color: #3c4043;
+			cursor: pointer;
+			font-family: arial,sans-serif;
+			width: 80px;
+		}
+		.bbtn:hover{
+			border: 1.5px solid #dadce0;
+		}
+		body, a, label, button, .bbtn, input{
+			cursor: url({% static 'images/cursor.png' %})0 0,
+			default !important;
+		}
 	</style>
 </head>
 

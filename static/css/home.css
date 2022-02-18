@@ -14,6 +14,11 @@
     height: 75%;
     margin-top: 5px;
 } 
+/* Id for submit button...main page & about page */
+#submit{
+    font-size: 15px;
+    font-family: cursive;
+}
 
 /* Search box uplaod from admin panel using models */
 .hsinput {

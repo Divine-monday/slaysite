@@ -104,16 +104,16 @@ navs ul li a{
 	width: 40%;
 	height: 100px;
 }
-.tallvid{
+.allvid{
 	display: flex;
 	flex-wrap: wrap;
 }
-.txtitle{
+.xtitle{
 	margin-right: 3%;
 	width: 280px;
 	padding: 22px;
 }
-.tvids{
+.vids{
 	width: 280px;
 	height: 180px;
 }

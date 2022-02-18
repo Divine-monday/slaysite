@@ -192,6 +192,25 @@ class Hillsong(models.Model):
             img.save(self.hillsong_file.path)
 
 
+# Gospel model
+class Gospel(models.Model):
+    gospel_title =  models.CharField(max_length=100)
+    gospel_video = models.FileField(upload_to="Gospel/%y", default="")
+    gospel_file = models.ImageField(default='default.png', blank=True, upload_to="Gospel")
+
+    def __str__(self):
+        return self.gospel_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.gospel_file.path)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.gospel_file.path)
+
+
+
 # Amazon models
 class Amazon(models.Model):
     amazon_title =  models.CharField(max_length=100)
@@ -399,6 +418,25 @@ class Cfood(models.Model):
             img.thumbnail(output_size)
             img.save(self.cfood_file.path)
 
+
+# # Crypto models
+class Crypto(models.Model):
+    crypto_title =  models.CharField(max_length=100)
+    crypto_url = models.URLField()
+    crypto_file = models.ImageField(default='default.png', blank=True, upload_to="crypto_icons")
+
+    def __str__(self):
+        return self.crypto_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.crypto_file.path)
+        if img.height > 50 or img.width > 50:
+            output_size = (50, 50)
+            img.thumbnail(output_size)
+            img.save(self.crypto_file.path)
+
+
 # # Disney models
 class Disney(models.Model):
     disney_title =  models.CharField(max_length=100)
@@ -556,6 +594,24 @@ class HealthCare(models.Model):
             output_size = (50, 50)
             img.thumbnail(output_size)
             img.save(self.healthcare_file.path)
+
+
+# # ICT models
+class ICT(models.Model):
+    ict_title =  models.CharField(max_length=100)
+    ict_url = models.URLField()
+    ict_file = models.ImageField(default='default.png', blank=True, upload_to="ict_icons")
+
+    def __str__(self):
+        return self.ict_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.ict_file.path)
+        if img.height > 50 or img.width > 50:
+            output_size = (50, 50)
+            img.thumbnail(output_size)
+            img.save(self.ict_file.path)
 
 
 # # Images models
@@ -863,6 +919,24 @@ class Videos(models.Model):
             output_size = (50, 50)
             img.thumbnail(output_size)
             img.save(self.videos_file.path)
+
+
+# # Wallet models
+class Wallet(models.Model):
+    wallet_title =  models.CharField(max_length=100)
+    wallet_url = models.URLField()
+    wallet_file = models.ImageField(default='default.png', blank=True, upload_to="wallet_icons")
+
+    def __str__(self):
+        return self.wallet_title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.wallet_file.path)
+        if img.height > 50 or img.width > 50:
+            output_size = (50, 50)
+            img.thumbnail(output_size)
+            img.save(self.wallet_file.path)
 
 
 # # Weather models
