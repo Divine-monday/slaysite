@@ -225,15 +225,3 @@
 	border:1px solid #ccc;
 	box-sizing: border-box;
 }
-
-
-/* Footer part */
-.afooter{
-	width: 100%;
-	text-align: center;
-	background-color: #202945;
-	font-family: Arial, sans-serif;
-	color: white;
-	display: inline-block;
-	flex-wrap: wrap;
-}

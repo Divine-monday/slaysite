@@ -1,0 +1,77 @@
+
+/* Donation tab */
+.mss{
+	text-align: center;
+	font-family: Elephant;
+	color: rgb(110, 110, 110);
+}
+#mabt{
+    text-indent: 20px;
+}
+#mabt a{
+    padding: 4px 20px;
+	border-radius: 3px;
+    width: 8em;
+	background-color: #f8f9fa;
+    color: black;
+}
+
+/* Form donation */
+#mcaa{
+	margin-left: 10%;
+}
+.mcontact{
+	padding: 5px 0px;
+	border-radius: 5px;
+	flex-wrap: wrap;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.mrcol{
+	width: 50%;
+	display: inline-block;
+}
+@media screen and (max-width: 850px){
+	.mcontact{
+		margin: 0em 2em 2em 2em;
+	}
+	.mrcol {
+		width: 30em;
+		display: inline-block;
+	}  
+} 
+.minp{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.minp input,textarea{
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+}
+.mbooking{
+    /* background-image: linear-gradient(rgb(1, 3, 24),rgba(7, 7, 7, 0.822)), url("{url static 'images/slider1.jpg'}"); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 23.5rem;
+	padding: 40px 10px;
+	border-radius: 5px;
+	display: flex;	
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.mupbd{
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}

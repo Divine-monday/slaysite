@@ -1,3 +1,4 @@
+from turtle import title
 from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -28,11 +29,11 @@ def home_view(request, *args, **kwargs):
     return render(request, "blog/home.html", context)
 
 def main_view(request, *args, **kwargs):
-    # ip = requests.get('https://api.ipify.org?format=json')
-    # ip_data = json.loads(ip.text)
-    # res = requests.get('http://ip-api.com/json/' + ip_data ["ip"])
-    # location_data_one = res.text
-    # location_data = json.loads(location_data_one)
+    ip = requests.get('https://api.ipify.org?format=json')
+    ip_data = json.loads(ip.text)
+    res = requests.get('http://ip-api.com/json/' + ip_data ["ip"])
+    location_data_one = res.text
+    location_data = json.loads(location_data_one)
 
 #################### Geo-location for country only at the top #####################
     slaysite = SlaysiteIcons.objects.all()
@@ -93,7 +94,7 @@ def main_view(request, *args, **kwargs):
     covid19_links = Covid_19.objects.all()
 
     context = {
-        # "data": location_data,
+        "data": location_data,
         "slaysiteicon_file": slaysite,
         "news_article_file": newsarticlelink,
         "web_file": web_links,
@@ -152,7 +153,14 @@ def main_view(request, *args, **kwargs):
         "covid19_file": covid19_links,
         'title': 'Easy access to different websites',
     }
+    return render(request, "blog/main.html", context)
 
+
+
+def donate_view(request, *args, **kwargs):
+    context = {
+        'title': 'Support-Donation for Dzipup'
+    }
     if request.method == "POST":
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
@@ -168,10 +176,9 @@ def main_view(request, *args, **kwargs):
             recipient_list=['slaysite@gmail.com'],
             fail_silently=False
             )
-        return render(request, "blog/main.html", context)
+        return render(request, "blog/donate.html")
     else:
-        return render(request, "blog/main.html", context)
-
+        return render(request, "blog/donate.html", context)
 
 
 
@@ -205,6 +212,7 @@ def about_view(request, *args, **kwargs):
         return render (request, "blog/about.html", context)
 
 
+
 def tour_view(request, *args, **kwargs):
     tourall_links = TourAll.objects.all()
     tourmovies_links = TourMovies.objects.all()
@@ -223,3 +231,8 @@ def tour_view(request, *args, **kwargs):
         'title': 'Finding Your Next Tour On Dzipup',
     }
     return render(request, "blog/tour.html", context)
+
+
+
+def advert_view(request, *args, **kwargs):
+    return render(request, "blog/advert.html")

@@ -133,16 +133,3 @@
 }
 
 
-/* Footer part */
-.hfooter{
-	background-color: #202945;
-	color: white;
-	height: 40px;
-	font-family: Arial, sans-serif;
-	text-align: center;
-	padding-top: 1px;
-	letter-spacing: 1px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}

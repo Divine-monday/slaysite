@@ -3,25 +3,16 @@
 {% block meta_description %}This is the number one best website of Dzipup and the world most used.{% endblock %}">
 {% block content %}
 
-<center>
-	{% if messages %}
-		{% for message in messages %}
-			<h2>Thanks {{ message }}</h2>
-			<p>We recieved your email and will respond shortly...</p>
-		{% endfor %}
-	{% endif %}
-</center>
-
 <div class="mimg2">
     {% for m in slaysiteicon_file %}
         <span>
             <a href="{% url 'home' %}" title="Back to Home Page">
                 <img class="msimg" src="{{m.slaysiteicon_file.url}}">
             </a>
-                <!-- <small style="font-size: 14px;
+                <small style="font-size: 14px;
                                 font-family: Arial,sans-serif;
 								font-weight: bold; 
-                                margin-left: 2px;">{{data.country}}</small> -->
+                                margin-left: 2px;">{{data.country}}</small>
         </span>
     {% endfor %}
     <h1 class="mh"><a href="{% url 'about' %}"><button><b>About Us</b></button></a>
@@ -84,7 +75,7 @@
         <!-- <li><a href="#" data-tab-target="#reference">-<i class="fa fa-flag"></i> Reference-</a></li> -->
         <li><a href="#" data-tab-target="#wwe">-<i class="fa fa-wwe"></i> <b>WWE-</b></a></li>
         <li><a href="#" data-tab-target="#corona">-<i class="fa fa-heartbeat"></i> <b>COVID-19-</b></a></li>
-        <li style="background: red;"><a href="#" data-tab-target="#donate"><i class="fa fa-heart"></i> DONATE</a></li>
+        <li style="background: red;"><a href="{% url 'donate' %}"><i class="fa fa-heart"></i> DONATE</a></li>
     </ul>
 </div>
 <br>
@@ -1133,67 +1124,6 @@
 	<br><br><br>
 </div>
 
-
-<!--For Donation are all contained on the DONATION section -->
-<div id="donate" data-tab-content>
-	<h2><i class="fa fa-heart"></i> DONATE</h2>
-	<hr>
-	<br>
-<div style="font-family: arial,sans-serif;">
-	<h3 class="mss">Donation To Dzipup</h3>
-
-	<h4 id="mabt"><u>About Dzipup</u></h4>
-	<div style="padding: 15px;">
-		<p>Dzipup is mainly developed and written for institutions, companies, organisations and individuals to
-				help enhance, protect and grant easy search and access to websites of choice and to also keep the user
-				privacy easy, clean and clear.</p>
-		
-		<p>Your donation help sustain a vibrant and diverse <b>Dzipup Community</b> and shows your support for
-				more unique features and valuable projects ahead to come. We rely on memberships, individual donations,
-				and cooperate sponsorships, as well as your support in any of this areas. No amount is too small for
-				those who are interested in donating to <b>Dzipup.</b> We appreciate in all.</p>
-	</div>
-
-	<div id="mcaa">
-		<p style="font-weight: bold; font-size: large;">After donation:</p>
-		<p>Please provide the neccessary informations below so to recieve a notification which will be sent by <b>Dzipup.</b></p>
-	</div>
-
-	<form class="mcontact" method="POST" enctype="multipart/form-data">
-		{% csrf_token %}
-		<div class="mrcol">
-			<div class="minp">
-				<label>Name*</label>
-				<input type="text" name="message-name" id="textarea" placeholder="Enter name" required="">
-			</div>
-			<div class="minp">
-				<label>Email address*</label>
-				<input type="email" name="message-email" id="textarea" placeholder="Email address" required="">
-			</div>
-			<div class="minp">
-				<label>Subject*</label>
-				<textarea name="message-subject" id="textarea" placeholder="Enter note..."></textarea>
-			</div>
-			<input class="minp" type="submit" id="submit" value="Submit">
-		</div>
-	</form>
-</div>
-<br><br>
-<div class="mbooking" style="background-image: linear-gradient(rgb(1, 3, 24),rgba(7, 7, 7, 0.822)), url({% static 'images/ss.jpg' %});">
-		<div class="mupbd">
-			<h3>
-				<p style="color: #00aced;">Via Paypal</p>
-				<p>Paypal Id: itznduka@gmail.com</p>
-				<lab style="color: #00aced;">OR</lab>
-				<div class="bank-details">
-					<p>Account_Name: DIVINE MONDAY</p>
-					<p>Account_Number: 2120099674</p>
-					<p>Bank_Name: UBA BANK</p>
-				</div>
-			</h3>
-		</div>
-	</div>
-</div>
 <!-- End of the tabs -->
 </div>
 

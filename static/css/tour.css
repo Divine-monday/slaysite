@@ -7,6 +7,7 @@
 	padding: 4px 20px;
 	border-radius: 3px;
 	background-color: #F0F0F0;
+    color: black;
 	float: left;
     position: fixed;
 }
@@ -63,7 +64,7 @@ navs ul li a{
     #navs{
         position: fixed;
         width: 100%;
-        top: 6.7em;
+        top: 7.8em;
         left: -100%;
         text-align: center;
         transition: all .5s;

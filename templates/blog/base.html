@@ -75,6 +75,7 @@
 
 	<link rel="stylesheet" href="{% static 'css/home.css' %}">
 	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/donate.css' %}">
 	<link rel="stylesheet" href="{% static 'css/about.css' %}">
 	<link rel="stylesheet" href="{% static 'css/tour.css' %}">
 	<link rel="shortcut icon" href="{% static 'images/d.png' %}">
@@ -83,38 +84,72 @@
 	
 	<noscript>Sorry! Your browser does not support JavaScript!</noscript>
 	{% if title %}
-		<title>Dzipup Web Browser - {{ title }}</title>
+		<title>Dzipup | {{ title }}</title>
 	{% else %}
 		<title>Dzipup Web Browser</title>
 	{% endif %}
 
-	<style>
-		/* 202124 */
-		.theme-Dark{
-			background-color: #131927;
-			transition: 0.8s;
-			color: white;
-		}
-		.bbtn{
-			margin-top: 1%;
-			margin-left: 80%;
-			margin-bottom: 0;
-			padding: 5px;
-			background-color: #f8f9fa;
-			border: 1px solid #f8f9fa;
-			border-radius: 4px;
-			color: #3c4043;
-			cursor: pointer;
-			font-family: arial,sans-serif;
-			width: 80px;
-		}
-		.bbtn:hover{
-			border: 1.5px solid #dadce0;
-		}
-		body, a, label, button, .bbtn, input{
-			cursor: url({% static 'images/cursor.png' %})0 0,
-			default !important;
-		}
+<style>
+	/* 202124 */
+	.theme-Dark{
+		background-color: #131927;
+		transition: 0.8s;
+		color: white;
+	}
+	.bbtn{
+		margin-top: 1%;
+		margin-left: 80%;
+		margin-bottom: 0;
+		padding: 5px;
+		background-color: #f8f9fa;
+		border: 1px solid #f8f9fa;
+		border-radius: 4px;
+		color: #3c4043;
+		cursor: pointer;
+		font-family: arial,sans-serif;
+		width: 80px;
+	}
+	.bbtn:hover{
+		border: 1.5px solid #dadce0;
+	}
+	body, a, label, button, .bbtn, input{
+		cursor: url({% static 'images/cursor.png' %})0 0,
+		default !important;
+	}
+
+	/* Footer part */
+	.hfooter{
+		background-color: #202945;
+		color: white;
+		height: 45px;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		padding-top: 1px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+	#hsup{
+		background-color:red;
+		color: white;
+		padding: 3px 10px;
+		font-size: small;
+		font-weight: bold;
+		border-radius: 4px;
+	}
+	.hadver{
+		float: left;
+	}
+	.hadver a, .hprivate a{
+		color: #f8f9fa;
+		text-decoration: none;
+	}
+	.hprivate{
+		float: right;
+	}
+	.hadver a:hover, .hprivate a:hover{
+		color: #c9c9c9;
+		text-decoration: underline;
+	}
 	</style>
 </head>
 
@@ -123,6 +158,14 @@
 	{% block content %}
 
 	{% endblock %}
+
+	<div class="hfooter">
+		<p class="hadver"><a href="{% url 'advert' %}">&#8617 Advertisement</a></p>
+		<a href="{% url 'donate' %}"><p class="hadver" id="hsup">Support</p></a>
+		<p class="hprivate">&copy 2022 Slaysite Inc.</p>
+		<p class="hprivate"><a href="">Settings</a></p>
+		<p class="hprivate"><a href="">Terms of Service</a></p>
+	</div>
 	
 <script>
 // For dark mode saving even when you have gone off the site
